@@ -42,6 +42,8 @@ class App extends Component<{}, IState> {
      */
     getDataFromServer() {
         let x = 0;
+
+        // set interval for server updates
         const interval = setInterval(() => {
             DataStreamer.getData((serverResponds: ServerRespond[]) => {
                 this.setState({
